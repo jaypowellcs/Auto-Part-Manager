@@ -24,3 +24,27 @@ parts C to J.</p>
 
 <p>Commited changes made to gitlabs.</p>
 </blockquote>
+
+<h2>Task D</h2>
+<blockquote>
+<i>Add an “About” page to the application to describe your chosen customer’s company to web viewers and include navigation to and from the “About” page and the main screen.
+</i>
+
+<b>Created about.html in templates folder</b>
+<p>about.html, line 5 => changed title to about us</p>
+<p>about.html, line 7 => added bootstrap</p>
+<p>about.html, line 11-38 => added content to html with bootstrap classes</p>
+
+<b>Created AboutController in controllers folder</b>
+<p>AboutController, line 12 => Added @Controller</p>
+<p>AboutController, line 14 => Added GetMapping to return About.html</p>
+
+<b>Created nav in mainscreen & about</b>
+
+<p>about.html,mainscreen.html line 21-28, line 23-30, => added li classes with nav links</p>
+
+<b>Created a new folder in static/images</b>
+<p>added folders to directory images</p>
+
+<p>Commited changes made to gitlabs.</p>
+</blockquote>

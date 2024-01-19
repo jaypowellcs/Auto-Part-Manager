@@ -20,6 +20,16 @@
     <h1 class="text-center">Powell & Sons Auto Center</h1>
     <hr>
 
+    <ul class="navbar-nav align-self-auto">
+        <li class="nav-item active">
+            <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="about">About</a>
+        </li>
+    </ul>
+
+
     <h2 class="text-center">Car Parts</h2>
     <form class="text-center" th:action="@{/mainscreen}">
         Filter: <input type="text" name="partkeyword" id="partkeyword" size="50" th:value="${partkeyword}" required />
