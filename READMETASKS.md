@@ -66,3 +66,31 @@ parts C to J.</p>
 <p>Commited changes made to gitlabs.</p>
 
 </blockquote>
+
+<h2>Task F</h2>
+<blockquote>
+<i>Add a “Buy Now” button to your product list. Your “Buy Now” button must meet each of the following parameters:
+•  The “Buy Now” button must be next to the buttons that update and delete products.
+•  The button should decrement the inventory of that product by one. It should not affect the inventory of any of the associated parts.
+•  Display a message that indicates the success or failure of a purchase.
+</i>
+
+<b>Add Buy Now Button</b>
+
+<p>mainscreen.html=> line 98-99 -> added buy now button with get request to buyController</p>
+
+<b>Add Buy Confirmed and Buy failure html files</b>
+<p>confirmationbuyerror.html => created to show when there is an error in buying</p>
+<p>confirmationbuyproduct.html=> created to show when there is a success in buying an item</p>
+
+<b>Added BuyController</b>
+<p>BuyController => line 22 set the class as a controller</p>
+<p>BuyController => line 25 create a new productRepository object to use its functions</p>
+<p>BuyController => line 27,28 new get request with input from our buy now button</p>
+<p>BuyController => line 33 check and see if the product exists if it doesn't return error</p>
+<p>BuyController => line 35 check and see if the product inventory is over 0 and if not return error</p>
+<p>BuyController => line 36-40 get current inv levels and decrease by one and return confirmation buy html</p>
+
+<p>Commited changes made to gitlabs.</p>
+
+</blockquote>

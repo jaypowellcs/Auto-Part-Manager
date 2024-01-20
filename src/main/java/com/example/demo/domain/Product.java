@@ -79,6 +79,9 @@ public class Product implements Serializable {
         this.inv = inv;
     }
 
+    public void buyInv(int inv) {
+        this.inv = inv - 1;
+    }
     public Set<Part> getParts() {
         return parts;
     }
@@ -103,5 +106,8 @@ public class Product implements Serializable {
     @Override
     public int hashCode() {
         return (int) (id ^ (id >>> 32));
+    }
+
+    public void buyInv() {
     }
 }
