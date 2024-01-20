@@ -182,3 +182,16 @@ parts C to J.</p>
 <p>Committed changes made to gitlabs.</p>
 
 </blockquote>
+
+
+<h2>Task J</h2>
+<blockquote>
+<i>Remove the class files for any unused validators in order to clean your code.
+</i>
+
+<b>Removed unused validators</b>
+<p>ValidDeletePart.java line 13 & line 14 => they had no usages so deleted them from the file.</p>
+
+<p>Committed changes made to gitlabs.</p>
+
+</blockquote>
