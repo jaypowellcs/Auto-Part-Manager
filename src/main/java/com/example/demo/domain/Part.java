@@ -46,7 +46,8 @@ public class Part implements Serializable {
         this.name = name;
         this.price = price;
         this.inv = inv;
-
+        this.maxInv = 500;
+        this.minInv = 0;
     }
 
     public Part(long id, String name, double price, int inv) {
@@ -54,6 +55,8 @@ public class Part implements Serializable {
         this.name = name;
         this.price = price;
         this.inv = inv;
+        this.maxInv = 500;
+        this.minInv = 0;
     }
 
     public Part(long id, String name, double price, int inv, int maxInv, int minInv) {

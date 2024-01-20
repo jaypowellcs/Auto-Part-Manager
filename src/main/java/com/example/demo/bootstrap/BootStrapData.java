@@ -1,5 +1,6 @@
 package com.example.demo.bootstrap;
 
+import com.example.demo.domain.InhousePart;
 import com.example.demo.domain.OutsourcedPart;
 import com.example.demo.domain.Part;
 import com.example.demo.domain.Product;
@@ -39,18 +40,49 @@ public class BootStrapData implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
+
         if(partRepository.count() == 0 && productRepository.count() == 0) {
-            Part brakePads =  new Part(1,"Break Pads", 150.00, 13,500, 5 );
-            Part battery =  new Part(2,"Battery", 250.00, 67, 500, 5  );
-            Part sparkPlugs =  new Part(3,"Spark Plugs", 450.00, 78, 500, 5  );
-            Part headLights =  new Part(4,"Head Lights", 550.00, 23, 500, 5 );
-            Part engine =  new Part(5,"Engines", 1150.00, 34, 500, 5 );
+            
+            InhousePart brakePads  =  new InhousePart();
+            brakePads.setName("Brake Pads");
+            brakePads.setPrice(29.99);
+            brakePads.setInv(50);
+            brakePads.setMaxInv(500);
+            brakePads.setMinInv(0);
+
+            InhousePart battery =  new InhousePart();
+            battery.setName("Battery");
+            battery.setPrice(69.99);
+            battery.setInv(20);
+            battery.setMaxInv(500);
+            battery.setMinInv(0);
+
+            InhousePart sparkPlugs =  new InhousePart();
+            sparkPlugs.setName("Spark Plugs");
+            sparkPlugs.setPrice(129.99);
+            sparkPlugs.setInv(35);
+            sparkPlugs.setMaxInv(500);
+            sparkPlugs.setMinInv(0);
+
+            InhousePart headLights =  new InhousePart();
+            headLights.setName("Head Lights");
+            headLights.setPrice(19.99);
+            headLights.setInv(67);
+            headLights.setMaxInv(500);
+            headLights.setMinInv(0);
+
+            InhousePart engines =  new InhousePart();
+            engines.setName("Engines");
+            engines.setPrice(429.99);
+            engines.setInv(24);
+            engines.setMaxInv(500);
+            engines.setMinInv(0);
 
             partRepository.save(brakePads);
             partRepository.save(battery);
             partRepository.save(sparkPlugs);
             partRepository.save(headLights);
-            partRepository.save(engine);
+            partRepository.save(engines);
 
             Product minivan = new Product(1, "Minivan", 12000.00, 15 );
             Product truck = new Product(2, "Truck", 50000.00, 45);
@@ -70,6 +102,8 @@ public class BootStrapData implements CommandLineRunner {
             o.setInv(20);
             o.setPrice(20.0);
             o.setId(100L);
+            o.setMinInv(0);
+            o.setMaxInv(500);
             outsourcedPartRepository.save(o);
             OutsourcedPart thePart=null;
             List<OutsourcedPart> outsourcedParts=(List<OutsourcedPart>) outsourcedPartRepository.findAll();
