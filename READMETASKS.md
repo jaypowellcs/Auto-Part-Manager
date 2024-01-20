@@ -10,7 +10,7 @@ parts C to J.</p>
 <h2>Task B</h2>
 <blockquote>
 <p>Created a new readme file which will be named READMETASKS.md</p>
-<p>Commited changes made to gitlabs.</p>
+<p>Committed changes made to gitlabs.</p>
 </blockquote>
 
 <h2>Task C</h2>
@@ -22,7 +22,7 @@ parts C to J.</p>
 <p>mainscreen.html,line 27,29,33,34,60,62,70 => Changed buttons colors</p>
 <p>mainscreen.html,line 23,33,34,56, 70 => Changed to Car Parts & Cars</p>
 
-<p>Commited changes made to gitlabs.</p>
+<p>Committed changes made to gitlabs.</p>
 </blockquote>
 
 <h2>Task D</h2>
@@ -46,7 +46,7 @@ parts C to J.</p>
 <b>Created a new folder in static/images</b>
 <p>added folders to directory images</p>
 
-<p>Commited changes made to gitlabs.</p>
+<p>Committed changes made to gitlabs.</p>
 </blockquote>
 
 <h2>Task E</h2>
@@ -63,7 +63,7 @@ parts C to J.</p>
 <p>BootStrapData => line 61-65 -> saved car parts to our repository</p>
 <p>BootStrapData => line 67-78 -> changed outsourced part to a new company and changed the conditions</p>
 
-<p>Commited changes made to gitlabs.</p>
+<p>Committed changes made to gitlabs.</p>
 
 </blockquote>
 
@@ -91,6 +91,57 @@ parts C to J.</p>
 <p>BuyController => line 35 check and see if the product inventory is over 0 and if not return error</p>
 <p>BuyController => line 36-40 get current inv levels and decrease by one and return confirmation buy html</p>
 
-<p>Commited changes made to gitlabs.</p>
+<p>Committed changes made to gitlabs.</p>
 
+</blockquote>
+
+<h2>Task G</h2>
+<blockquote>
+<i>Modify the parts to track maximum and minimum inventory by doing the following:
+•  Add additional fields to the part entity for maximum and minimum inventory.
+•  Modify the sample inventory to include the maximum and minimum fields.
+•  Add to the InhousePartForm and OutsourcedPartForm forms additional text inputs for the inventory so the user can set the maximum and minimum values.
+•  Rename the file the persistent storage is saved to.
+•  Modify the code to enforce that the inventory is between or at the minimum and maximum value.
+</i>
+
+<b>Add maxInv and minInv to Part</b>
+
+<p>Domain/Part line 28-32 => Created a minInv and maxInv levels with messages stating that these values could never be negative</p>
+<p>Domain/Part line 46-60 => Added maxInv and minInv to constructors</p>
+<p>Domain/Part line 107-120 => Created Getter & Setter for maxInv and MinInv</p>
+
+<b>Added maxInv and minInv to BootstrapData</b>
+
+<p>BootstrapData line 42-47 => added min and max inventory levels</p>
+
+<b>Added maxInv and minInv to mainscreen.html</b>
+
+<p>mainscreen.html line 51-52 => added min and max inventory levels headers</p>
+<p>mainscreen.html line 61-62 => added min and max inventory levels values to the tables</p>
+
+
+<b>Added minInv and maxInv fields to InHousePart and OutSourcedPart</b>
+
+<p>InhousePartForm line 23-25 => added fields for min and max values parts</p>
+<p>OutsoucedPartForm line 25-27 => added fields for min and max values parts</p>
+
+<b>Changed Database name to CarDb</b>
+
+<p>Templates/Application.properties line 7 => changed DB name to CarDb</p>
+
+<b>Created method in Part.java to check if inventory level is between min and max</b>
+<p>Part.java line 139-145 => created method to return boolean if inv is within range</p>
+
+
+<b>Created new html file to display error</b>
+<p>resouces/templates/inventoryerror.html line 8-9 => added content to show error for inventory levels</p>
+
+<b>Created validation check in AddOutSourcedPartController.java</b>
+<p>AddOutsourcedPartController.java line 51-55 => validation check</p>
+
+<b>Created validation check in AddInHousePartController.java</b>
+<p>AddInhousePartController.java line 49-55 => validation check</p>
+
+<p>Committed changes made to gitlabs.</p>
 </blockquote>

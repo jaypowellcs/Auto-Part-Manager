@@ -40,11 +40,11 @@ public class BootStrapData implements CommandLineRunner {
     public void run(String... args) throws Exception {
 
         if(partRepository.count() == 0 && productRepository.count() == 0) {
-            Part brakePads =  new Part(1,"Break Pads", 150.00, 13 );
-            Part battery =  new Part(2,"Battery", 250.00, 67 );
-            Part sparkPlugs =  new Part(3,"Spark Plugs", 450.00, 78 );
-            Part headLights =  new Part(4,"Head Lights", 550.00, 23 );
-            Part engine =  new Part(5,"Engines", 1150.00, 34 );
+            Part brakePads =  new Part(1,"Break Pads", 150.00, 13,500, 5 );
+            Part battery =  new Part(2,"Battery", 250.00, 67, 500, 5  );
+            Part sparkPlugs =  new Part(3,"Spark Plugs", 450.00, 78, 500, 5  );
+            Part headLights =  new Part(4,"Head Lights", 550.00, 23, 500, 5 );
+            Part engine =  new Part(5,"Engines", 1150.00, 34, 500, 5 );
 
             partRepository.save(brakePads);
             partRepository.save(battery);
@@ -52,7 +52,7 @@ public class BootStrapData implements CommandLineRunner {
             partRepository.save(headLights);
             partRepository.save(engine);
 
-            Product minivan = new Product(1, "Minivan", 12000.00, 15);
+            Product minivan = new Product(1, "Minivan", 12000.00, 15 );
             Product truck = new Product(2, "Truck", 50000.00, 45);
             Product suv = new Product(3, "SUV", 70000.00, 35);
             Product coupe = new Product(4, "Coupe", 80000.00, 25);

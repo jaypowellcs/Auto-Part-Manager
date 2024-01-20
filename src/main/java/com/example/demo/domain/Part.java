@@ -24,10 +24,15 @@ public class Part implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     long id;
     String name;
+
     @Min(value = 0, message = "Price value must be positive")
     double price;
     @Min(value = 0, message = "Inventory value must be positive")
     int inv;
+    @Min(value = 0, message = "Minimum inventory must be positive")
+    int minInv;
+    @Min(value = 0, message = "Maximum inventory value must be positive")
+    int maxInv;
 
     @ManyToMany
     @JoinTable(name="product_part", joinColumns = @JoinColumn(name="part_id"),
@@ -41,6 +46,7 @@ public class Part implements Serializable {
         this.name = name;
         this.price = price;
         this.inv = inv;
+
     }
 
     public Part(long id, String name, double price, int inv) {
@@ -49,6 +55,16 @@ public class Part implements Serializable {
         this.price = price;
         this.inv = inv;
     }
+
+    public Part(long id, String name, double price, int inv, int maxInv, int minInv) {
+        this.id = id;
+        this.name = name;
+        this.price = price;
+        this.inv = inv;
+        this.maxInv = maxInv;
+        this.minInv = minInv;
+    }
+
 
     public long getId() {
         return id;
@@ -93,6 +109,23 @@ public class Part implements Serializable {
     public String toString(){
         return this.name;
     }
+
+    public int getMinInv() {
+        return minInv;
+    }
+
+    public void setMinInv(int minInv) {
+        this.minInv = minInv;
+    }
+
+    public int getMaxInv() {
+        return maxInv;
+    }
+
+    public void setMaxInv(int maxInv) {
+        this.maxInv = maxInv;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -101,6 +134,14 @@ public class Part implements Serializable {
         Part part = (Part) o;
 
         return id == part.id;
+    }
+
+    public boolean checkInvValid(int maxInv, int minInv, int inv) {
+        if(inv <= maxInv && inv >= minInv) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     @Override
