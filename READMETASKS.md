@@ -169,3 +169,16 @@ parts C to J.</p>
 <p>Committed changes made to gitlabs.</p>
 
 </blockquote>
+
+<h2>Task I</h2>
+<blockquote>
+<i>Add at least two unit tests for the maximum and minimum fields to the PartTest class in the test package.
+</i>
+
+<b>Added units tests to PartTest</b>
+<p>PartTest line 161-176 => added unit tests to test the max and min fields</p>
+<p>Ran both tests and finished with exit code 0</p>
+
+<p>Committed changes made to gitlabs.</p>
+
+</blockquote>
