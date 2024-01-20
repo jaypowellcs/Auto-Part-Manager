@@ -48,3 +48,21 @@ parts C to J.</p>
 
 <p>Commited changes made to gitlabs.</p>
 </blockquote>
+
+<h2>Task E</h2>
+<blockquote>
+<i>Add a sample inventory appropriate for your chosen store to the application. You should have five parts and five products in your sample inventory and should not overwrite existing data in the database.
+</i>
+
+<b>Edited BootstrapData</b>
+
+<p>BootStrapData => line 42 -> added condition if Part Database and Product Database == 0 to not add products</p>
+<p>BootStrapData => line 42-47 -> added car parts with our repository conditions</p>
+<p>BootStrapData => line 49-53 -> saved car parts to our repository</p>
+<p>BootStrapData => line 55-59 -> added cars with our repository conditions</p>
+<p>BootStrapData => line 61-65 -> saved car parts to our repository</p>
+<p>BootStrapData => line 67-78 -> changed outsourced part to a new company and changed the conditions</p>
+
+<p>Commited changes made to gitlabs.</p>
+
+</blockquote>
