@@ -145,3 +145,27 @@ parts C to J.</p>
 
 <p>Committed changes made to gitlabs.</p>
 </blockquote>
+
+<h2>Task H</h2>
+<blockquote>
+<i>Add validation for between or at the maximum and minimum fields. The validation must include the following:
+•  Display error messages for low inventory when adding and updating parts if the inventory is less than the minimum number of parts.
+•  Display error messages for low inventory when adding and updating products lowers the part inventory below the minimum.
+•  Display error messages when adding and updating parts if the inventory is greater than the maximum.
+</i>
+
+<b>Added html files</b>
+
+<p>templates/lowinventoryerror => line 6-10 -> created file to show error when inventory is trying to be inputted is lower then it should be</p>
+<p>templates/maxinventoryerror => line 6-10 -> created file to show error when inventory is trying to be inputted is higher then it should be</p>
+
+<b>Changed OutsourcedPartController & AddInhousePartController to show errors on max and low inventory</b>
+<p>AddOutsourcedPartController line 54-57 => conditional statement to check if user is trying to put in to low or too high invenotry</p>
+<p>AddInHousePartController line 51-55 => conditional statement to check if user is trying to put in to low or too high invenotry</p>
+
+<b>Changed EnufPartsValidator.java</b>
+<p>EnufPartsValidator.java line 36 => changed it so that it won't allow the user to buy product when there is one below the min inventory</p>
+
+<p>Committed changes made to gitlabs.</p>
+
+</blockquote>

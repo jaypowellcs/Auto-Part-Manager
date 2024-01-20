@@ -51,8 +51,10 @@ public class AddOutsourcedPartController {
             if (part.checkInvValid(part.getMaxInv(), part.getMinInv(), part.getInv())) {
                 repo.save(part);
                 return "confirmationaddpart";
+            } else if (part.getInv() < part.getMinInv()) {
+                return "lowinventoryerror";
             } else {
-                return "inventoryerror";
+                return "maxinventoryerror";
             }
         }
     }
