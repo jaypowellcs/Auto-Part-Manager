@@ -77,7 +77,7 @@ public class AddProductController {
             if(product.getId()!=0) {
                 Product product2 = repo.findById((int) product.getId());
                 PartService partService1 = context.getBean(PartServiceImpl.class);
-                if(product.getInv()- product2.getInv()>0) {
+                if(product.getInv() - product2.getInv()>0) {
                     for (Part p : product2.getParts()) {
                         int inv = p.getInv();
                         p.setInv(inv - (product.getInv() - product2.getInv()));
@@ -87,6 +87,7 @@ public class AddProductController {
             }
             else{
                 product.setInv(0);
+                
             }
             repo.save(product);
             return "confirmationaddproduct";

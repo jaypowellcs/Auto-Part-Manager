@@ -144,6 +144,13 @@ parts C to J.</p>
 <p>AddInhousePartController.java line 49-55 => validation check</p>
 
 <p>Committed changes made to gitlabs.</p>
+
+<b>Submission 2</b>
+
+<i>The application includes a "Product Detail" form. However, the application generates a "Whitelabel Error Page" error message when the user tries to add a product whose inventory is greater than the associated part inventory. </i>
+
+<p>File EnufPartsValidator line 37 --> changed it so that if product is greater then parts in inventory that it won't be added an error message will show. </p>
+
 </blockquote>
 
 <h2>Task H</h2>
@@ -195,3 +202,4 @@ parts C to J.</p>
 <p>Committed changes made to gitlabs.</p>
 
 </blockquote>
+
