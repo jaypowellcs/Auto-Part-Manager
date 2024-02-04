@@ -93,6 +93,10 @@ parts C to J.</p>
 
 <p>Committed changes made to gitlabs.</p>
 
+<b>Submission 2</b>
+
+<p>Commented out lines on bootstrapfile -- lines 107-119 --> They are not needed for the program to function. Removes the null exception error.</p>
+
 </blockquote>
 
 <h2>Task G</h2>

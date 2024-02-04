@@ -28,7 +28,6 @@ public class BootStrapData implements CommandLineRunner {
 
     private final PartRepository partRepository;
     private final ProductRepository productRepository;
-
     private final OutsourcedPartRepository outsourcedPartRepository;
 
     public BootStrapData(PartRepository partRepository, ProductRepository productRepository, OutsourcedPartRepository outsourcedPartRepository) {
@@ -41,8 +40,8 @@ public class BootStrapData implements CommandLineRunner {
     public void run(String... args) throws Exception {
 
 
-        if(partRepository.count() == 0 && productRepository.count() == 0) {
-            
+        if(partRepository.count() == 0 && productRepository.count() == 0  && outsourcedPartRepository.count() ==0) {
+
             InhousePart brakePads  =  new InhousePart();
             brakePads.setName("Brake Pads");
             brakePads.setPrice(29.99);
@@ -105,18 +104,19 @@ public class BootStrapData implements CommandLineRunner {
             o.setMinInv(0);
             o.setMaxInv(500);
             outsourcedPartRepository.save(o);
-            OutsourcedPart thePart=null;
-            List<OutsourcedPart> outsourcedParts=(List<OutsourcedPart>) outsourcedPartRepository.findAll();
-            for(OutsourcedPart part:outsourcedParts){
-                if(part.getName().equals("out test"))thePart=part;
-            }
-
-            System.out.println(thePart.getCompanyName());
-
-            outsourcedParts = (List<OutsourcedPart>) outsourcedPartRepository.findAll();
-            for(OutsourcedPart part:outsourcedParts){
-                System.out.println(part.getName()+" "+part.getCompanyName());
-            }
+//            OutsourcedPart thePart=null;
+//            List<OutsourcedPart> outsourcedParts=(List<OutsourcedPart>) outsourcedPartRepository.findAll();
+//            for(OutsourcedPart part:outsourcedParts){
+//                if(part.getName().equals("out test"))thePart=part;
+//            }
+//
+//
+//            System.out.println(thePart.getCompanyName());
+//
+//            outsourcedParts = (List<OutsourcedPart>) outsourcedPartRepository.findAll();
+//            for(OutsourcedPart part:outsourcedParts){
+//                System.out.println(part.getName()+" "+part.getCompanyName());
+//            }
         }
 
 
