@@ -205,5 +205,8 @@ parts C to J.</p>
 
 <p>Committed changes made to gitlabs.</p>
 
+<b>Removed unused validator file</b>
+<p>Removed DeletePartValidator.java from the project</p>
+
 </blockquote>
 
